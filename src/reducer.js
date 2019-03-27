@@ -1,6 +1,7 @@
 const INPUT_ADDED = 'INPUT_ADDED'
 const EVALUATION_STARTED = 'EVALUATION_STARTED'
 const EVALUATION_COMPLETED = 'EVALUATION_COMPLETED'
+const INPUT_CLEARED = 'INPUT_CLEARED'
 
 const initialState = {
   inputs: [],
@@ -30,32 +31,45 @@ export function calculatorReducer(state = initialState, action) {
             evaluate(state.expressions[state.expressions.length - 1])
           )]
       }
+    case INPUT_CLEARED:
+      return {
+        ...state,
+        inputs: [],
+        evaluated: []
+      }
     default:
       return state
   }
 }
 
-function inputAdded(input) {
+export function inputAdded(input) {
   return {
     type: INPUT_ADDED,
     payload: input
   }
 }
 
-function evaluationStarted() {
+export function evaluationStarted() {
   return {
     type: EVALUATION_STARTED,
     payload: null
   }
 }
 
-function evaluationCompleted() {
+export function evaluationCompleted() {
   return {
     type: EVALUATION_COMPLETED,
     payload: null
   }
 }
 
-function evaluate(expression) {
+export function inputCleared() {
+  return {
+    type: INPUT_CLEARED,
+    payload: null
+  }
+}
+
+export function evaluate(expression) {
   return eval(expression)
 }
