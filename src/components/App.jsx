@@ -3,6 +3,7 @@ import Display from './Display'
 import Clear from './Clear'
 import Equals from './Equals'
 import Operator from './Operator'
+import Paren from './Paren'
 import Number from './Number'
 
 export default function App() {
@@ -20,10 +21,9 @@ export default function App() {
         <Operator value='*' id='multiply' className='operator' />
         <Operator value='/' id='divide' className='operator' />
         <Operator value='.' id='decimal' className='operator' />
-        <Operator value='(' id='left-paren' className='operator' />
-        <Operator value=')' id='right-paren' className='operator' />
+        <Paren value='(' id='left-paren' className='operator' />
+        <Paren value=')' id='right-paren' className='operator' />
         <Operator value='**2' id='square' className='operator' />
-        <Operator value='**-2' id='sqrt' className='operator' />
 
         {/* Number buttons */}
 
