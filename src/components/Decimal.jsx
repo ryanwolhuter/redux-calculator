@@ -23,6 +23,7 @@ function Decimal({ value, id, dispatch, input }) {
       id={id}
       onClick={() => conditionalDispatch(value)}
       variant='contained'
+      color='secondary'
     >
       {value}
     </Button>

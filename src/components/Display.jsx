@@ -1,13 +1,20 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import Paper from '@material-ui/core/Paper'
+import Typography from '@material-ui/core/Typography'
 
 function Display({ input, answer }) {
   return (
     <Paper className='display'>
-      {input}
-      <br />
-      {answer}
+
+      <Typography>
+        {input}
+      </Typography>
+
+      <Typography>
+        {answer}
+      </Typography>
+      
     </Paper>
   )
 }

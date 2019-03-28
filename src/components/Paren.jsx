@@ -22,7 +22,8 @@ function Paren({ value, id, dispatch, input }) {
       value={value}
       id={id}
       onClick={() => conditionalDispatch(value)}
-      variant='contained'      
+      variant='contained' 
+      color='secondary'
     >
       {value}
     </Button>

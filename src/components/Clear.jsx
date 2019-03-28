@@ -10,6 +10,7 @@ function Clear({ value, id, dispatch }) {
       id={id}
       onClick={() => dispatch(inputCleared())}
       variant='contained'
+      color='secondary'
     >
       {value}
     </Button>

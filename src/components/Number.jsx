@@ -10,6 +10,7 @@ function Number({ value, id, dispatch }) {
       id={id}
       onClick={() => dispatch(inputAdded(value))}
       variant='contained'
+      color='primary'
       >
       {value}
     </Button>

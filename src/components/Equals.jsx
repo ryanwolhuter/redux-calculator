@@ -16,7 +16,7 @@ function Equals({ value, id, dispatch }) {
       id={id}
       onClick={() => startAndCompleteEvaluation()}
       variant='contained'
-      color='primary'
+      color='secondary'
     >
       {value}
     </Button>
