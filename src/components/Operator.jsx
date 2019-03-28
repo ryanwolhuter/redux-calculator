@@ -2,14 +2,15 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { inputAdded } from '../reducer'
 
-const operators = ['+', '-', '*', '/', '.']
+// The only non-numeric an operator can follow is ')'
+const nonNumeric = ['+', '-', '*', '/', '.', '(',]
 
 function Operator({ value, id, dispatch, input }) {
 
   function conditionalDispatch(value) {
     const lastInput = input[input.length - 1]
 
-    if (!lastInput || operators.includes(lastInput)) {
+    if (!lastInput || nonNumeric.includes(lastInput)) {
       return null
     }
     
