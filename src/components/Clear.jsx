@@ -1,16 +1,18 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { inputCleared } from '../reducer'
+import Button from '@material-ui/core/Button'
 
 function Clear({ value, id, dispatch }) {
   return (
-    <button
+    <Button
       value={value}
       id={id}
       onClick={() => dispatch(inputCleared())}
+      variant='contained'
     >
       {value}
-    </button>
+    </Button>
   )
 }
 

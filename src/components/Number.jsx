@@ -1,15 +1,18 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { inputAdded } from '../reducer'
+import Button from '@material-ui/core/Button'
 
 function Number({ value, id, dispatch }) {
   return (
-    <button
+    <Button
       value={value}
       id={id}
-      onClick={() => dispatch(inputAdded(value))}>
+      onClick={() => dispatch(inputAdded(value))}
+      variant='contained'
+      >
       {value}
-    </button>
+    </Button>
   )
 }
 

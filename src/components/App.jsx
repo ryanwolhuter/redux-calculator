@@ -1,10 +1,11 @@
 import React from 'react'
 import Display from './Display'
-import Clear from './Clear'
-import Equals from './Equals'
-import Operator from './Operator'
 import Paren from './Paren'
+import Operator from './Operator'
+import Clear from './Clear'
 import Number from './Number'
+import Equals from './Equals'
+import Decimal from './Decimal'
 
 export default function App() {
   return (
@@ -37,7 +38,7 @@ export default function App() {
         <Operator value='-' id='minus' className='operator' />
 
         <Number value='0' id='zero' className='number' />
-        <Operator value='.' id='decimal' className='operator' />
+        <Decimal value='.' id='decimal' className='operator' />
 
         <Equals value='=' id='equals' className='control' />
 

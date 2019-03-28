@@ -18,13 +18,12 @@ html, body {
 }
 
 .container {
-  border-style: solid;
-  border-color: black;
   width: 400px;
   height: 600px;
   display: grid;
   grid-template-rows: repeat(6, 1fr);
   grid-template-columns: repeat(4, 1fr);
+  gap: 2%;
   grid-template-areas: 
     "display display display display"
 }
@@ -33,6 +32,3 @@ html, body {
   grid-area: display;
 }
 
-.paren {
-  grid-area: paren;
-}

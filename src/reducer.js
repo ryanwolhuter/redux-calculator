@@ -71,5 +71,14 @@ export function inputCleared() {
 }
 
 export function evaluate(expression) {
-  return eval(expression)
+  let answer
+
+  try {
+    answer = eval(expression)
+  }
+  catch (error) {
+    return null
+  }
+
+  return answer
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { inputAdded } from '../reducer'
+import Button from '@material-ui/core/Button'
 
 // The only non-numeric an operator can follow is ')'
 const nonNumeric = ['+', '-', '*', '/', '.', '(',]
@@ -18,13 +19,14 @@ function Operator({ value, id, dispatch, input }) {
   }
 
   return (
-    <button
+    <Button
       value={value}
       id={id}
       onClick={() => conditionalDispatch(value)}
+      variant='contained'
     >
       {value}
-    </button>
+    </Button>
   )
 }
 

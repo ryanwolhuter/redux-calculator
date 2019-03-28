@@ -1,13 +1,14 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import Paper from '@material-ui/core/Paper'
 
 function Display({ input, answer }) {
   return (
-    <div className='display'>
+    <Paper className='display'>
       {input}
       <br />
       {answer}
-    </div>
+    </Paper>
   )
 }
 
