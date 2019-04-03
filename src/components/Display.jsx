@@ -4,17 +4,18 @@ import Paper from '@material-ui/core/Paper'
 import Typography from '@material-ui/core/Typography'
 
 function Display({ input, answer }) {
+  
   return (
     <Paper className='display'>
 
-      <Typography>
+      <Typography className='input'>
         {input}
       </Typography>
 
-      <Typography>
-        {answer}
+      <Typography className='answer'>
+        {answer[answer.length - 1]}
       </Typography>
-      
+
     </Paper>
   )
 }

@@ -6,7 +6,7 @@ import Button from '@material-ui/core/Button'
 // The only non-numeric an operator can follow is ')'
 const nonNumeric = ['+', '-', '*', '/', '.', '(',]
 
-function Operator({ value, id, dispatch, input }) {
+function Operator({ value, children, dispatch, input }) {
 
   function conditionalDispatch(value) {
     const lastInput = input[input.length - 1]
@@ -21,12 +21,11 @@ function Operator({ value, id, dispatch, input }) {
   return (
     <Button
       value={value}
-      id={id}
       onClick={() => conditionalDispatch(value)}
       variant='contained'
       color='secondary'
     >
-      {value}
+      {children}
     </Button>
   )
 }

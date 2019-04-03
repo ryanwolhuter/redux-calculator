@@ -1,7 +1,6 @@
 import React from 'react'
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles'
 
-import Background from './Background'
 import Display from './Display'
 import Paren from './Paren'
 import Operator from './Operator'
@@ -13,14 +12,19 @@ import Decimal from './Decimal'
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: 'rgba(232, 236, 241, 0.9)'
+      main: '#fed9ca'
     },
     secondary: {
-      main: 'rgba(174, 168, 211, 0.9)'
+      main: '#c5c5c5'
     },
     background: {
-      paper: 'rgba(232, 236, 241, 0.9)'
+      paper: '#ffefe0'
     }
+  },
+  typography: {
+    useNextVariants: true,
+    fontSize: 24,
+    fontFamily: 'Orbitron'
   }
 })
 
@@ -30,40 +34,44 @@ export default function App() {
     <>
       <MuiThemeProvider theme={theme}>
         <div className="App">
-          <Background />
           <div className='container'>
-            <Display />
+            <Display></Display>
 
-            <Paren value='(' id='left-paren' className='paren' />
-            <Paren value=')' id='right-paren' className='paren' />
-            <Operator value='**2' id='square' className='operator' />
+            <Paren value='(' className='paren'>(</Paren>
+            <Paren value=')' className='paren'>)</Paren>
 
-            <Clear value='AC' id='clear' className='control' />
+            <Operator value='**2' className='operator'>
+              x<sup>2</sup>
+            </Operator>
 
-            <Number value='1' id='one' className='number' />
-            <Number value='2' id='two' className='number' />
-            <Number value='3' id='three' className='number' />
+            <Clear value='AC' className='control'>AC</Clear>
 
-            <Operator value='/' id='divide' className='operator' />
+            <Number value='1' className='number'>1</Number>
+            <Number value='2' className='number'>2</Number>
+            <Number value='3' className='number'>3</Number>
 
-            <Number value='4' id='four' className='number' />
-            <Number value='5' id='five' className='number' />
-            <Number value='6' id='six' className='number' />
+            <Operator value='/' className='operator'>/</Operator>
 
-            <Operator value='*' id='multiply' className='operator' />
+            <Number value='4' className='number'>4</Number>
+            <Number value='5' className='number'>5</Number>
+            <Number value='6' className='number'>6</Number>
 
-            <Number value='7' id='seven' className='number' />
-            <Number value='8' id='eight' className='number' />
-            <Number value='9' id='nine' className='number' />
+            <Operator value='*' className='operator'>*</Operator>
 
-            <Operator value='-' id='minus' className='operator' />
+            <Number value='7' className='number'>7</Number>
+            <Number value='8' className='number'>8</Number>
+            <Number value='9' className='number'>9</Number>
 
-            <Number value='0' id='zero' className='number' />
-            <Decimal value='.' id='decimal' className='operator' />
+            <Operator value='-' className='operator'>-</Operator>
 
-            <Equals value='=' id='equals' className='control' />
+            <Number value='0' className='number'>0</Number>
+            <Decimal value='.' className='operator'>
+              <strong>.</strong>
+            </Decimal>
 
-            <Operator value='+' id='plus' className='operator' />
+            <Equals value='=' className='control'>=</Equals>
+
+            <Operator value='+' className='operator'>+</Operator>
           </div>
         </div>
       </MuiThemeProvider>

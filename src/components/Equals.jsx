@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { evaluationStarted, evaluationCompleted } from '../reducer'
 import Button from '@material-ui/core/Button'
 
-function Equals({ value, id, dispatch }) {
+function Equals({ value, children, dispatch }) {
 
   function startAndCompleteEvaluation() {
     dispatch(evaluationStarted())
@@ -13,12 +13,11 @@ function Equals({ value, id, dispatch }) {
   return (
     <Button
       value={value}
-      id={id}
       onClick={() => startAndCompleteEvaluation()}
       variant='contained'
       color='secondary'
     >
-      {value}
+      {children}
     </Button>
   )
 }

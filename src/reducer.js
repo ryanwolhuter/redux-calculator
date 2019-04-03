@@ -24,12 +24,12 @@ export function calculatorReducer(state = initialState, action) {
         inputs: []
       }
     case EVALUATION_COMPLETED:
+      const answer = evaluate(state.expressions[state.expressions.length - 1])
+      
       return {
         ...state,
-        evaluated: [
-          ...state.evaluated.concat(
-            evaluate(state.expressions[state.expressions.length - 1])
-          )]
+        evaluated: [...state.evaluated.concat(answer)],
+        inputs: [...state.inputs.concat(answer)]
       }
     case INPUT_CLEARED:
       return {

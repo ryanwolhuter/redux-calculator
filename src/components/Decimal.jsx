@@ -5,7 +5,7 @@ import Button from '@material-ui/core/Button'
 
 const nonNumeric = ['+', '-', '*', '/', '.', '(', ')',]
 
-function Decimal({ value, id, dispatch, input }) {
+function Decimal({ value, children, dispatch, input }) {
 
   function conditionalDispatch(value) {
     const lastInput = input[input.length - 1]
@@ -20,12 +20,11 @@ function Decimal({ value, id, dispatch, input }) {
   return (
     <Button
       value={value}
-      id={id}
       onClick={() => conditionalDispatch(value)}
       variant='contained'
-      color='secondary'
+      color='primary'
     >
-      {value}
+      {children}
     </Button>
   )
 }
