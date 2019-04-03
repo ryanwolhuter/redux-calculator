@@ -31,11 +31,10 @@ const theme = createMuiTheme({
 export default function App() {
 
   return (
-    <>
       <MuiThemeProvider theme={theme}>
         <div className="App">
           <div className='container'>
-            <Display></Display>
+            <Display/>
 
             <Paren value='(' className='paren'>(</Paren>
             <Paren value=')' className='paren'>)</Paren>
@@ -75,6 +74,5 @@ export default function App() {
           </div>
         </div>
       </MuiThemeProvider>
-    </>
   )
 }
