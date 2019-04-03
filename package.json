@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --mode development --colors"
+    "start": "webpack-dev-server --mode development --colors",
+    "build": "webpack --mode production"
   },
   "keywords": [],
   "author": "Ryan Wolhuter",
